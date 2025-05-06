@@ -2,7 +2,7 @@ FROM python:3.10-slim AS builder
 ADD . /app
 WORKDIR /app
 
-RUN pip install --target=/app requests
+RUN pip install --target=/app requests importlib-metadata
 
 FROM gcr.io/distroless/python3-debian12
 COPY --from=builder /app /app
