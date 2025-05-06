@@ -1,5 +1,26 @@
 import os
 import sys
+import platform
+
+# Add diagnostic logging
+print(f"Python version: {platform.python_version()}")
+print(f"Python implementation: {platform.python_implementation()}")
+print(f"Python version info: {sys.version_info}")
+print(f"Python version string: {sys.version}")
+
+try:
+    import requests
+    print(f"Requests version: {requests.__version__}")
+except ImportError as e:
+    print(f"Failed to import requests: {e}")
+except Exception as e:
+    print(f"Error importing requests: {type(e).__name__}: {e}")
+    import traceback
+    traceback.print_exc()
+
+# Original imports
+import os
+import sys
 import requests
 
 

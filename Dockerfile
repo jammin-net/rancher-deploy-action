@@ -4,7 +4,7 @@ WORKDIR /app
 
 RUN pip install --target=/app requests
 
-FROM gcr.io/distroless/python3-debian12
+FROM gcr.io/distroless/python3-debian13
 COPY --from=builder /app /app
 WORKDIR /app
 ENV PYTHONPATH=/app
