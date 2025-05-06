@@ -1,10 +1,10 @@
-FROM python:3.10-slim AS builder
+FROM python:3.8 AS builder
 ADD . /app
 WORKDIR /app
 
 RUN pip install --target=/app requests importlib-metadata
 
-FROM gcr.io/distroless/python3-debian12
+FROM gcr.io/distroless/python3-debian10
 COPY --from=builder /app /app
 WORKDIR /app
 ENV PYTHONPATH=/app
