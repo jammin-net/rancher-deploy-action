@@ -1,6 +1,6 @@
 name: 'Rancher Deploy Action'
 description: 'Action to deploy docker image in rancher'
-author: 'Yan Tadeu'
+author: 'jammin.net'
 branding:
   icon: 'check'
   color: 'gray-dark'

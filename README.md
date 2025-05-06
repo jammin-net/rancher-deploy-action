@@ -26,9 +26,9 @@
 
 **Optional** URL TO YOUR DOCKER IMAGE WITH LATEST TAG.
 
-
 ## Example usage
-`````
+
+`````yaml
   
 - name: Rancher Deploy
   uses: yantadeu/rancher-deploy-action@v0.0.2
