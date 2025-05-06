@@ -1,10 +1,9 @@
 FROM python:3.9 AS builder
 ADD . /app
 WORKDIR /app
+RUN pip install --target=/app "requests<2.28.0" "urllib3<1.27.0"
 
-RUN pip install --target=/app requests
-
-FROM gcr.io/distroless/python3-debian13
+FROM gcr.io/distroless/python3-debian12
 COPY --from=builder /app /app
 WORKDIR /app
 ENV PYTHONPATH=/app
